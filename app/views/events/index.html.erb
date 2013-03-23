@@ -1,0 +1,5 @@
+<% if @user.present? %>
+  <%= render :partial => 'myevents' %>
+<% else %>
+  <%= render :partial => 'allevents' %>
+<%end%>

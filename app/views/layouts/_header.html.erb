@@ -1,0 +1,24 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "Events @ Square", root_path, id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "All Events", root_path %></li>
+          <% if current_user %>
+            <li><%= link_to "My Events", user_events_path(current_user) %></li>
+            <li><%= link_to "Past Events", archive_path %></li>
+            <li  class="dropdown">
+              </a>
+                <li>
+                  <%= link_to "Logout", logout_path, method: "get" %>
+                </li>
+            </li>
+          <% else %>
+            <li><%= link_to "Login", login_path %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
